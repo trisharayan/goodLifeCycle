@@ -68,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
         _11.setText(""+Rcreate);
         SharedPreferences.Editor editor = sharedpreferences.edit();
         int numstart=sharedpreferences.getInt("create",0);
+        int numstartD=sharedpreferences.getInt("Rdestroy",0);
+        _72.setText(""+numstartD);
+        editor.putInt("Rdestroy", numstartD+1);
         int tempnum = numstart+1;
         _12.setText(""+tempnum);
         Log.i("create", String.valueOf(Rcreate));
@@ -168,7 +171,13 @@ public class MainActivity extends AppCompatActivity {
         int tempnum = numstart+1;
         _72.setText(""+tempnum);
         editor.putInt("Rdestroy", numstart+1);
+        Log.i("Rdestroy", String.valueOf(""+numstart+1));
         editor.apply();
+
+
+    }
+
+    protected void onDestroyHelp() {
 
 
     }
